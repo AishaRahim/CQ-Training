@@ -22,6 +22,9 @@ when score >= 50 then 'D'
 ELSE 'F'
 END AS GRADE from marks
 
+
+//ASSIGNMENT 2
+
 /*Select values such that the students have failed including students whose mark field is NULL*/
 
 select *, case
