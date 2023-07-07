@@ -49,8 +49,8 @@ foreach (char c in str)
 }
 Console.WriteLine("occurrence of given character is " + count);
 
-// Write a program to do the below datetime calculation
-// Print the current date and time in different formats
+//Write a program to do the below datetime calculation
+//Print the current date and time in different formats
 
 DateTime currentDateTime = DateTime.Now;
 Console.WriteLine(currentDateTime);
@@ -87,6 +87,7 @@ Console.WriteLine("Date after addition is " + date1.AddDays(10));
 //Rewrite the above program using stringbuilder
 
 using System.Text;
+using System.Threading.Channels;
 
 StringBuilder sb = new StringBuilder();
 sb.Append("this is in a stringbuilder object");
@@ -117,15 +118,27 @@ for (int i = sb.Length - 1; i > 0; i--)
 Console.WriteLine(sb2);
 
 
-Append Hai at the beginning of the given string
+//Append Hai at the beginning of the given string
 Console.WriteLine("Append Hai at the beginning of the given string:");
 Console.WriteLine(sb.Insert(0, "Hai "));
 
-Last character of the string
+//Last character of the string
 Console.WriteLine("Last character of the string: ");
 Console.WriteLine(sb[sb.Length - 1]);
 
-Single Calculate  method, Calculate out add, out sub, out mult, out div
+Console.WriteLine("Enter char to find occurence: ");
+char chh = char.Parse(Console.ReadLine());
+int c = 0;
+for (int i = 0; i < sb.Length; i++)
+{
+    if (sb[i] == chh)
+    {
+        c = c + 1;
+    }
+}
+Console.WriteLine("Occurence is: " + c);
+
+//Single Calculate  method, Calculate out add, out sub, out mult, out div
 using System;
 namespace ConsoleApp67
 {
