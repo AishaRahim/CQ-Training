@@ -1,4 +1,3 @@
-//Write a program to display the below details of a given input string
 Console.WriteLine("Enter a string:");
 string str = Console.ReadLine();
 
@@ -12,17 +11,17 @@ Console.WriteLine("Enter the character:");
 char ch = Convert.ToChar(Console.ReadLine());
 for (int i = 0; i < str.Length; i++)
 {
-   if (strarray[i] == ch)
-   {
-       Console.WriteLine("Index of " + ch + " is " + i);
-   }
+    if (strarray[i] == ch)
+    {
+        Console.WriteLine("Index of " + ch + " is " + i);
+    }
 }
 
 //Reverse of the string
 string rev = "";
 for (int i = strarray.Length - 1; i > -1; i--)
 {
-   rev += strarray[i];
+    rev += strarray[i];
 }
 Console.WriteLine("Reverse of the string is " + rev);
 
@@ -43,15 +42,15 @@ char occ = Convert.ToChar(Console.ReadLine());
 int count = 0;
 foreach (char c in str)
 {
-   if (c == occ)
-   {
-       count += 1;
-   }
+    if (c == occ)
+    {
+        count += 1;
+    }
 }
 Console.WriteLine("occurrence of given character is " + count);
 
-//Write a program to do the below datetime calculation
-//Print the current date and time in different formats
+// Write a program to do the below datetime calculation
+// Print the current date and time in different formats
 
 DateTime currentDateTime = DateTime.Now;
 Console.WriteLine(currentDateTime);
@@ -85,8 +84,48 @@ DateTime date1 = new DateTime(2023, 7, 1);
 Console.WriteLine("Date before addition is " + date1);
 Console.WriteLine("Date after addition is " + date1.AddDays(10));
 
+//Rewrite the above program using stringbuilder
 
-//Single Calculate  method, Calculate out add, out sub, out mult, out div
+using System.Text;
+
+StringBuilder sb = new StringBuilder();
+sb.Append("this is in a stringbuilder object");
+Console.WriteLine(sb);
+
+//Index of a particular character
+Console.WriteLine("Index of 'i' is: ");
+Console.WriteLine(sb.ToString().IndexOf("i"));
+
+//Length of the string
+Console.WriteLine("Length of the string: ");
+Console.WriteLine(sb.Length);
+
+//Replace ‘a’ by ‘_’
+Console.WriteLine("after replacing");
+Console.WriteLine(sb.Replace("a", "_"));
+
+
+
+//reverse of the string
+Console.WriteLine("reverse of the string");
+StringBuilder sb2 = new StringBuilder();
+
+for (int i = sb.Length - 1; i > 0; i--)
+{
+    sb2.Append(sb[i]);
+}
+Console.WriteLine(sb2);
+
+
+Append Hai at the beginning of the given string
+Console.WriteLine("Append Hai at the beginning of the given string:");
+Console.WriteLine(sb.Insert(0, "Hai "));
+
+Last character of the string
+Console.WriteLine("Last character of the string: ");
+Console.WriteLine(sb[sb.Length - 1]);
+
+Single Calculate  method, Calculate out add, out sub, out mult, out div
 using System;
 namespace ConsoleApp67
 {
@@ -95,18 +134,19 @@ namespace ConsoleApp67
         static void Main(string[] args)
         {
             Calc(20, 10, out float add, out float sub, out float mult, out float div);
-            Console.WriteLine("sum is: " +add );
+            Console.WriteLine("sum is: " + add);
             Console.WriteLine("diff is: " + sub);
             Console.WriteLine("product is: " + mult);
             Console.WriteLine("quotient is: " + div);
         }
-        public static void Calc(float x, float y, out float add, out float sub, out float mult, out float div )
+        public static void Calc(float x, float y, out float add, out float sub, out float mult, out float div)
         {
             add = x + y;
             sub = x - y;
             mult = x * y;
-            div = x / y;                      
+            div = x / y;
         }
 
     }
 }
+
