@@ -1,0 +1,26 @@
+CREATE Database student
+
+create table marks(
+	id int ,
+	sname varchar(20),
+	score int
+)
+
+insert into marks values (1,'a',10)
+insert into marks values (2,'abi',67)
+insert into marks(id,sname) values (3,'vinay')
+insert into marks values (4,'devi',100)
+
+
+select * from marks
+
+select *, case
+when score >= 90 then 'A'
+when score >= 80 then 'B'
+when score >= 60 then 'C'
+when score >= 50 then 'D'
+ELSE 'F'
+END AS GRADE from marks
+
+select * from marks where score < 50 or score is null
+
