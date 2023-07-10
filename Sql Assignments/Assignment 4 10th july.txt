@@ -14,4 +14,4 @@ SELECT * FROM Employee WHERE EName like '%John%'
 SELECT * FROM Employee WHERE EName like 'A%n'
 
 --Display all records who have alex or deo any where in name column
-SELECT * FROM Employee WHERE EName like '%alex%deo%' or EName like '%deo%alex%'
+SELECT * FROM Employee WHERE EName like '%alex%' or EName like '%deo%'
