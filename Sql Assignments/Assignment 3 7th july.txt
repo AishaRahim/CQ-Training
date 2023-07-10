@@ -42,7 +42,7 @@ SELECT * FROM Employee
 TRUNCATE TABLE Employee
 
 --display the joining date in two time zones - India and New York
-SELECT SWITCHOFFSET (JoiningDate, '-08:00') as JoiningDate FROM Employee
+SELECT *,SWITCHOFFSET (JoiningDate, '+05:30') AS JoiningTime_INDIA, SWITCHOFFSET (JoiningDate, '-04:00') as JoiningDate_US FROM Employee
 
 --Display the total no. of days each intern has joined
 SELECT DATEDIFF(DAY, JoiningDate, CURRENT_TIMESTAMP) AS DAYS_COMPLETED FROM Employee
