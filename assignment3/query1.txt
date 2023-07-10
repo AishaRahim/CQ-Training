@@ -22,6 +22,8 @@ when score >= 50 then 'D'
 ELSE 'F'
 END AS GRADE from marks
 
+select * from marks where score < 50 or score is null
+
 
 //ASSIGNMENT 2
 
