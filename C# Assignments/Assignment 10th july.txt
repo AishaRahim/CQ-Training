@@ -33,3 +33,9 @@ namespace EmployeeManagement
 using EmployeeManagement;
 Employee emp = new Employee(123, "AISHA", 250000.899);
 emp.Display();
+
+OUTPUT
+Employee Details:
+Id : 123
+Name : AISHA
+Salary : 250000.899
