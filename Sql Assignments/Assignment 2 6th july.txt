@@ -32,3 +32,59 @@ update marks set maxm ='erdftgyhujdrftgyhujdrftgyhuj' where id=3
 update marks set maxm ='erftgyhjdsdfghjkldfrgthyjuki' where id=4
 
 select * from marks
+
+
+CREATE DATABASE bookstore
+
+use bookstore
+
+CREATE TABLE Book
+(
+BookId int IDENTITY(1,1) CONSTRAINT PK_Book PRIMARY KEY,
+Bname varchar(50),
+AuthId INT CONSTRAINT FK_Author REFERENCES Author(AuthId),
+AddedOn DATETIME DEFAULT CURRENT_TIMESTAMP NOT NULL
+)
+--ALTER TABLE Book ADD AddedOn DATETIME DEFAULT CURRENT_TIMESTAMP
+
+CREATE TABLE Author
+(
+AuthId int IDENTITY(1,1) CONSTRAINT PK_AUTHOR PRIMARY KEY,
+Authname varchar(50),
+BookName VARCHAR(100)
+)
+
+CREATE TABLE Customer
+(
+CustomerId int IDENTITY(1,1) CONSTRAINT PK_Cust PRIMARY KEY, 
+BookId INT CONSTRAINT FK_Cust_Book REFERENCES Book(BookId),
+CustomerName varchar(50)
+)
+
+CREATE TABLE CustOrder
+(
+OrderId int IDENTITY(1,1) CONSTRAINT PK_CustOrder PRIMARY KEY,
+CustomerId INT CONSTRAINT FK_CustOrder_Cust REFERENCES Customer(CustomerId),
+AuthId INT CONSTRAINT FK_CustOrder_Author REFERENCES Author(AuthId),
+BookId INT CONSTRAINT FK_CustOrder_Book REFERENCES Book(BookId),
+CreatedOn DATETIME DEFAULT CURRENT_TIMESTAMP
+)
+
+INSERT INTO Author (Authname,BookName) VALUES('auth1','book1')
+INSERT INTO Author (Authname,BookName) VALUES('auth2','book2')
+INSERT INTO Author (Authname,BookName) VALUES('auth3','book3')
+INSERT INTO Author (Authname,BookName) VALUES('auth4','book4')
+
+
+INSERT INTO Book (Bname,AuthId,AddedOn) VALUES('book1','1','2022-01-05')
+INSERT INTO Book (Bname,AuthId,AddedOn) VALUES('book2','2','2022-06-05')
+INSERT INTO Book (Bname,AuthId,AddedOn) VALUES('book3','3','2022-07-05')
+
+INSERT INTO Customer (BookId,CustomerName) VALUES('1','cust1')
+INSERT INTO Customer (BookId,CustomerName) VALUES('2','cust2')
+INSERT INTO Customer (BookId,CustomerName) VALUES('3','cust3')
+
+INSERT INTO CustOrder (BookId,AuthId,CustomerId) VALUES('1','1','1')
+INSERT INTO CustOrder (BookId,AuthId,CustomerId) VALUES('2','3','1')
+INSERT INTO CustOrder (BookId,AuthId,CustomerId,CreatedOn) VALUES('3','2','1','2022-12-05')
+INSERT INTO CustOrder (BookId,AuthId,CustomerId,CreatedOn) VALUES('3','2','2','2022-01-05')
