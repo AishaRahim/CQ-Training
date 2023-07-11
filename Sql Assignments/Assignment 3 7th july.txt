@@ -1,7 +1,7 @@
 --ASSIGNMENT 3
 
 --1. Display the incremented id value (identity primary key)
-SELECT IDENT_CURRENT('Author');
+SELECT SCOPE_IDENTITY()
 
 --2. Display date in DD-MM-YYYY format
 SELECT FORMAT (getdate(), 'dd/MM/yyyy ') as date
