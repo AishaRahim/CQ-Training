@@ -17,18 +17,19 @@ SELECT COUNT(*) FROM Book WHERE DATEPART(YEAR,AddedOn) = '2022'
 
 SELECT COUNT(*) FROM Book WHERE DATEPART(YEAR,AddedOn) = '2022' AND DATENAME(DAY,AddedOn) = 'MONDAY'
 
-// Create an employee table with field “joiningdate” and display the joining date in two time zones - India and New York
+EMPLOYEE TABLE
 CREATE DATABASE CONTROLQORE
 
 USE CONTROLQORE
 
 CREATE TABLE Employee
 (
-	EID INT IDENTITY(1,1) PRIMARY KEY,
+	EID INT IDENTITY(1,1) CONSTRAINT PK_Employee PRIMARY KEY,
 	EName VARCHAR(20),
 	JoiningDate DATETIME,
 	EPhone BIGINT
 )
+
 
 INSERT INTO Employee(EName,JoiningDate,EPhone) VALUES ('AISHA','2023-07-04',88888888),
 ('RUBY','2023-07-03',55555555),('JUBIYA','2023-07-05',66666666),('NARAYAN','2023-07-03',77777777),
@@ -39,10 +40,11 @@ INSERT INTO Employee(EName,JoiningDate,EPhone) VALUES ('John Doe','2023-07-04',8
 ('Alex deo','2023-07-02',99999999),('Deo Alex','2023-05-02',99999999)
 
 SELECT * FROM Employee
-TRUNCATE TABLE Employee
 
 --display the joining date in two time zones - India and New York
-SELECT *,SWITCHOFFSET (JoiningDate, '+05:30') AS JoiningTime_INDIA, SWITCHOFFSET (JoiningDate, '-04:00') as JoiningDate_US FROM Employee
+SELECT * FROM sys.time_zone_info
+SELECT EID, JoiningDate AT TIME ZONE 'Eastern Standard Time' AS JoiningDateNY FROM Employee
+SELECT EID, JoiningDate AT TIME ZONE 'India Standard Time' AS JoiningDateINDIA FROM Employee 
 
 --Display the total no. of days each intern has joined
 SELECT DATEDIFF(DAY, JoiningDate, CURRENT_TIMESTAMP) AS DAYS_COMPLETED FROM Employee
