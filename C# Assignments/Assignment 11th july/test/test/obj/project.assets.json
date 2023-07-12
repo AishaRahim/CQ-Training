@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\CQ-Aisha\\source\\repos\\test\\test\\test.csproj",
+      "projectUniqueName": "C:\\Users\\CQ-Aisha\\source\\repos\\CQ-Training\\C# Assignments\\Assignment 11th july\\test\\test\\test.csproj",
       "projectName": "test",
-      "projectPath": "C:\\Users\\CQ-Aisha\\source\\repos\\test\\test\\test.csproj",
+      "projectPath": "C:\\Users\\CQ-Aisha\\source\\repos\\CQ-Training\\C# Assignments\\Assignment 11th july\\test\\test\\test.csproj",
       "packagesPath": "C:\\Users\\CQ-Aisha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\CQ-Aisha\\source\\repos\\test\\test\\obj\\",
+      "outputPath": "C:\\Users\\CQ-Aisha\\source\\repos\\CQ-Training\\C# Assignments\\Assignment 11th july\\test\\test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\CQ-Aisha\\AppData\\Roaming\\NuGet\\NuGet.Config",
