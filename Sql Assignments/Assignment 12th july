@@ -40,10 +40,10 @@ ON ca.CustomerID = c.CustomerID
 WHERE a.City = 'Dallas'
 
 --6.How many items with ListPrice more than $1000 have been sold?
-SELECT COUNT(*)
-FROM SalesLT.Product p
-INNER JOIN SalesLT.SalesOrderDetail od
-ON p.ProductID = od.ProductID
+SELECT COUNT(DISTINCT(d.ProductID))
+FROM SalesLT.SalesOrderDetail d
+LEFT JOIN SalesLT.Product p
+ON p.ProductID = d.ProductID
 WHERE p.ListPrice>1000
 
 --7.Give the CompanyName of those customers with orders over $100000. Include the subtotal plus tax plus freight.
@@ -66,7 +66,13 @@ WHERE c.CompanyName = 'Riding Cycles'
 
 --9. “Single Item Order” is a customer order where only one item is ordered.
 --Show the SalesOrderID and the UnitPrice for every Single Item Order.
-
+SELECT * FROM SalesLT.SalesOrderDetail
+WHERE SalesOrderID IN (
+SELECT SalesOrderID 
+FROM SalesLT.SalesOrderDetail
+GROUP BY SalesOrderID
+HAVING COUNT(*)=1
+)
 
 --10.Show the product description for culture ‘fr’ for product with ProductID 736.
 SELECT pd.Description
@@ -78,3 +84,15 @@ ON pm.ProductModelID = a.ProductModelID
 INNER JOIN SalesLT.ProductDescription pd
 ON a.ProductDescriptionID = pd.ProductDescriptionID
 WHERE P.ProductID = 736 AND a.Culture = 'fr'
+
+-- SELECT * FROM SalesLT.ProductModelProductDescription
+-- WHERE Culture = 'fr'
+
+-- SELECT * FROM SalesLT.Product
+-- WHERE ProductID = 736
+
+SELECT pd.Description
+FROM SalesLT.ProductModelProductDescription a
+INNER JOIN SalesLT.ProductDescription pd
+ON a.ProductDescriptionID = pd.ProductDescriptionID
+WHERE a.Culture = 'fr' AND a.ProductModelID = (SELECT ProductModelID FROM SalesLT.Product WHERE ProductID = 736)
