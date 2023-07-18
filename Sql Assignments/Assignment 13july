@@ -35,7 +35,6 @@ FROM SalesLT.Product
 GROUP BY SUBSTRING(ProductNumber,1,2)
 ORDER BY AVG(StandardCost) DESC
 
-
 --ASSIGNMENT 2
 --1.  Use the SubTotal value in SaleOrderHeader to list orders from the largest to the smallest. 
 --For each order show the CompanyName and the SubTotal and the total weight of the order.
@@ -64,7 +63,6 @@ JOIN SalesLT.Address a
 ON oh.ShipToAddressID = a.AddressID
 WHERE a.City = 'London'
 AND pc.Name = 'Cranksets'
-
 
 --3.For every customer with a ‘Main Office’ in Dallas show AddressLine1 of the ‘Main Office’ 
 --and AddressLine1 of the ‘Shipping’ address - if there is no shipping address leave it blank. 
@@ -108,6 +106,29 @@ ORDER BY Profit DESC
 
 --6.From which city 
 --    a) most no of order
+SELECT TOP 1 PERCENT WITH TIES City,COUNT(*) AS NoOfOrders
+FROM SalesLT.Address a
+INNER JOIN SalesLT.SalesOrderHeader oh
+ON oh.ShipToAddressID = A.AddressID
+GROUP BY City
+ORDER BY NoOfOrders DESC
+
 --    b) most profitable city 
+SELECT TOP 1 City, SUM((ListPrice-StandardCost)*OrderQty) AS Profit
+FROM SalesLT.Address a
+INNER JOIN SalesLT.SalesOrderHeader OH
+ON OH.ShipToAddressID=A.AddressID
+INNER JOIN SalesLT.SalesOrderDetail od 
+ON OD.SalesOrderID=OH.SalesOrderID
+INNER JOIN SalesLT.Product p
+ON p.ProductID = od.ProductID
+GROUP BY City
+ORDER BY Profit DESC
+
 --    c) which hasn't placed any orders
-  
+SELECT City 
+FROM SalesLT.Address A
+LEFT JOIN SalesLT.SalesOrderHeader OH
+ON A.AddressID = OH.ShipToAddressID
+WHERE SalesOrderID IS NULL
+GROUP BY City
