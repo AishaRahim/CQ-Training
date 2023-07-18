@@ -1,5 +1,6 @@
 USE AdventureWorksLT2019
 
+--ASSIGNMENT 1
 SELECT * FROM SalesLT.Product
 --1. What is the Name, ProductID and Weight for the item with Product Number 'RM-M823'
 SELECT Name,ProductID,Weight
@@ -34,6 +35,8 @@ FROM SalesLT.Product
 GROUP BY SUBSTRING(ProductNumber,1,2)
 ORDER BY AVG(StandardCost) DESC
 
+
+--ASSIGNMENT 2
 --1.  Use the SubTotal value in SaleOrderHeader to list orders from the largest to the smallest. 
 --For each order show the CompanyName and the SubTotal and the total weight of the order.
 
