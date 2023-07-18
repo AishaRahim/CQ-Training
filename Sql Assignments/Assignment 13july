@@ -96,7 +96,7 @@ INNER JOIN SalesLT.SalesOrderDetail od
 ON p.ProductID = od.ProductID
 INNER JOIN SalesLT.SalesOrderHeader oh
 ON od.SalesOrderID = oh.SalesOrderID
-GROUP BY od.SalesOrderID,oh.SubTotal,od.SalesOrderID
+GROUP BY od.SalesOrderID,oh.SubTotal
 
 --5.Show the best selling item by value.
 SELECT TOP 1 od.ProductID, SUM((ListPrice-StandardCost)*OrderQty) AS Profit
