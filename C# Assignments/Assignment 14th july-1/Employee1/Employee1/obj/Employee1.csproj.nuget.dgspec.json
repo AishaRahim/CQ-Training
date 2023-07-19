@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\CQ-Aisha\\source\\repos\\Employee1\\Employee1\\Employee1.csproj": {}
+    "C:\\Users\\CQ-Aisha\\source\\repos\\CQ-Training\\C# Assignments\\Assignment 14th july-1\\Employee1\\Employee1\\Employee1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\CQ-Aisha\\source\\repos\\Employee1\\Employee1\\Employee1.csproj": {
+    "C:\\Users\\CQ-Aisha\\source\\repos\\CQ-Training\\C# Assignments\\Assignment 14th july-1\\Employee1\\Employee1\\Employee1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CQ-Aisha\\source\\repos\\Employee1\\Employee1\\Employee1.csproj",
+        "projectUniqueName": "C:\\Users\\CQ-Aisha\\source\\repos\\CQ-Training\\C# Assignments\\Assignment 14th july-1\\Employee1\\Employee1\\Employee1.csproj",
         "projectName": "Employee1",
-        "projectPath": "C:\\Users\\CQ-Aisha\\source\\repos\\Employee1\\Employee1\\Employee1.csproj",
+        "projectPath": "C:\\Users\\CQ-Aisha\\source\\repos\\CQ-Training\\C# Assignments\\Assignment 14th july-1\\Employee1\\Employee1\\Employee1.csproj",
         "packagesPath": "C:\\Users\\CQ-Aisha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CQ-Aisha\\source\\repos\\Employee1\\Employee1\\obj\\",
+        "outputPath": "C:\\Users\\CQ-Aisha\\source\\repos\\CQ-Training\\C# Assignments\\Assignment 14th july-1\\Employee1\\Employee1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\CQ-Aisha\\AppData\\Roaming\\NuGet\\NuGet.Config",
