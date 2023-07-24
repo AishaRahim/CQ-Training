@@ -1,0 +1,367 @@
+--CREATE DATABASE BookMyShow
+USE BookMyShow
+
+CREATE TABLE Customer(
+CustomerID INT IDENTITY(100,1) CONSTRAINT PK_Customer PRIMARY KEY,
+CustName VARCHAR(50) NOT NULL,
+Email VARCHAR(50) NOT NULL,
+Phone BIGINT NOT NULL
+)
+--DROP TABLE Customer
+
+CREATE TABLE City(
+CityID INT IDENTITY(200,1) CONSTRAINT PK_City PRIMARY KEY,
+CityName INT NOT NULL
+)
+ALTER TABLE City
+ALTER COLUMN CityName VARCHAR(100)
+--DROP TABLE City
+
+CREATE TABLE Theatre(
+TheatreID INT IDENTITY(300,1) CONSTRAINT PK_Theatre PRIMARY KEY,
+TheatreName VARCHAR(50) NOT NULL,
+CityID INT CONSTRAINT FK_Theatre_City FOREIGN KEY REFERENCES City(CityID) NOT NULL,
+Phone BIGINT NOT NULL
+)
+--DROP TABLE Theatre
+
+CREATE TABLE Screen(
+ScreenID INT IDENTITY(400,1) CONSTRAINT PK_Screen PRIMARY KEY,
+ScreenName VARCHAR(50) NOT NULL,
+TheatreID INT CONSTRAINT FK_Screen_Theatre FOREIGN KEY REFERENCES Theatre(TheatreID) NOT NULL
+)
+--DROP TABLE Screen
+
+CREATE TABLE Movie(
+MovieID INT IDENTITY(500,1) CONSTRAINT PK_Movie PRIMARY KEY,
+Title VARCHAR(50) NOT NULL,
+Duration INT NOT NULL,
+ReleaseDate DateTime NOT NULL
+)
+SELECT * from Movie
+--DROP TABLE Movie
+
+CREATE TABLE Show(
+ShowID INT IDENTITY(600,1) CONSTRAINT PK_Show PRIMARY KEY,
+ShowTime DateTime NOT NULL,
+MovieID INT CONSTRAINT FK_Show_Movie FOREIGN KEY REFERENCES Movie(MovieID) NOT NULL,
+ScreenID INT CONSTRAINT FK_Show_Screen FOREIGN KEY REFERENCES Screen(ScreenID) NOT NULL
+)
+--DROP TABLE Show
+
+CREATE TABLE SeatCategory(
+SeatCatID INT IDENTITY(700,1) CONSTRAINT PK_SeatCategory PRIMARY KEY,
+SeatCatName VARCHAR(50) NOT NULL,
+Price INT  NOT NULL
+)
+--DROP TABLE SeatCategory
+
+CREATE TABLE Seat(
+SeatID INT IDENTITY(800,1) CONSTRAINT PK_Seat PRIMARY KEY,
+SeatNumber VARCHAR(10) NOT NULL,
+ScreenID INT CONSTRAINT FK_Seat_Screen FOREIGN KEY REFERENCES Screen(ScreenID) NOT NULL,
+SeatCatID INT CONSTRAINT FK_SeatCategory_Seat FOREIGN KEY REFERENCES SeatCategory(SeatCatID) NOT NULL
+)
+--DROP TABLE Seat
+
+CREATE TABLE Booking(
+BookingID INT  IDENTITY(900,1) CONSTRAINT PK_Booking PRIMARY KEY,
+CustomerID INT CONSTRAINT FK_Booking_Customer FOREIGN KEY REFERENCES Customer(CustomerID) NOT NULL,
+BookingDate DateTime NOT NULL,
+ShowID INT CONSTRAINT FK_Booking_Show FOREIGN KEY REFERENCES Show(ShowID) NOT NULL,
+Amount INT NOT NULL
+)
+--DROP TABLE Booking
+
+CREATE TABLE BookedSeat(
+BookedSeatID INT IDENTITY(1000,1) CONSTRAINT PK_BookSeat PRIMARY KEY,
+BookingID INT CONSTRAINT FK_BookedSeat_Show FOREIGN KEY REFERENCES Booking(BookingID) NOT NULL,
+SeatID INT CONSTRAINT FK_BookedSeat_Seat FOREIGN KEY REFERENCES Seat(SeatID) NOT NULL
+)
+--DROP TABLE BookedSeat
+
+CREATE TABLE Director(
+DirectorID INT IDENTITY(1100,1) CONSTRAINT PK_Director PRIMARY KEY,
+DirectorName VARCHAR(50) NOT NULL
+)
+--DROP TABLE Director
+
+CREATE TABLE DirectorMovie(
+DirectorMovieID INT IDENTITY(1100,1) CONSTRAINT PK_DirectorMovie PRIMARY KEY,
+DirectorID INT CONSTRAINT FK_DirectorMovie_Director FOREIGN KEY REFERENCES Director(DirectorID) NOT NULL,
+MovieID INT CONSTRAINT FK_DirectorMovie_MovieID FOREIGN KEY REFERENCES Movie(MovieID) NOT NULL
+)
+--DROP TABLE DirectorMovie
+
+CREATE TABLE Payment(
+PaymentID INT IDENTITY(1200,1) CONSTRAINT PK_Payment PRIMARY KEY,
+BookingID INT CONSTRAINT FK_Payment_Booking FOREIGN KEY REFERENCES Booking(BookingID) NOT NULL,
+TransactionID BIGINT NOT NULL,
+CardNumber BIGINT NOT NULL
+)
+--DROP TABLE Payment
+
+CREATE TABLE Language(
+LanguageID INT IDENTITY(1300,1) CONSTRAINT PK_Language PRIMARY KEY,
+LanguageName VARCHAR UNIQUE NOT NULL
+)
+ALTER TABLE Language
+ALTER COLUMN LanguageName VARCHAR(100);
+--DROP TABLE Language
+
+CREATE TABLE Genre(
+GenreID INT IDENTITY(1400,1) CONSTRAINT PK_Genre PRIMARY KEY,
+GenreName VARCHAR UNIQUE NOT NULL
+)
+ALTER TABLE Genre
+ALTER COLUMN GenreName VARCHAR(100);
+ALTER TABLE Genre DROP COLUMN GenreName
+--DROP TABLE Genre
+
+CREATE TABLE MovieLanguage(
+MovieLanguageID INT IDENTITY(1500,1) CONSTRAINT PK_MovieLanguage PRIMARY KEY,
+MovieID INT CONSTRAINT FK_MovieLanguage_Movie FOREIGN KEY REFERENCES Movie(MovieID) NOT NULL,
+LanguageID INT CONSTRAINT FK_MovieLanguage_Language FOREIGN KEY REFERENCES Language(LanguageID) NOT NULL
+)
+--DROP TABLE MovieLanguage
+
+CREATE TABLE MovieGenre(
+MovieGenreID INT IDENTITY(1600,1) CONSTRAINT PK_MovieGenre PRIMARY KEY,
+MovieID INT CONSTRAINT FK_MovieGenre_Movie FOREIGN KEY REFERENCES Movie(MovieID) NOT NULL,
+GenreID INT CONSTRAINT FK_MovieGenre_Genre FOREIGN KEY REFERENCES Genre(GenreID) NOT NULL
+)
+--DROP TABLE MovieGenre
+
+--DROP TABLE Customer
+--DROP TABLE City
+--DROP TABLE Theatre
+--DROP TABLE Screen
+--DROP TABLE Movie
+--DROP TABLE Show
+
+
+--DROP TABLE SeatCategory
+--DROP TABLE Seat
+--DROP TABLE Booking
+--DROP TABLE BookedSeat
+
+--DROP TABLE Director
+--DROP TABLE DirectorMovie
+--DROP TABLE Payment
+--DROP TABLE Language
+--DROP TABLE Genre
+--DROP TABLE MovieLanguage
+--DROP TABLE MovieGenre
+GO
+CREATE OR ALTER PROCEDURE AddCustomer
+@cName VARCHAR(50),
+@cEmail VARCHAR(50),
+@Phone BIGINT
+AS 
+BEGIN
+    INSERT INTO Customer(CustName,Email,Phone)
+	VALUES (@cName,@cEmail,@Phone)
+END 
+GO
+
+EXEC AddCustomer 'John Doe','john@example.com',	1234567890
+EXEC AddCustomer 'Alice Smith','alice@example.com', 9876543210
+EXEC AddCustomer 'Mike Jones','mike@example.com', 5555555555
+
+GO
+CREATE OR ALTER PROCEDURE AddGenre
+@gName VARCHAR(50)
+AS 
+BEGIN
+    INSERT INTO Genre(GenreName)
+	VALUES(@gName)
+END 
+GO
+
+EXEC AddGenre 'Action'
+EXEC AddGenre 'SciFi'
+EXEC AddGenre 'Drama'
+SELECT * FROM Genre
+SELECT * FROM Customer
+
+GO
+CREATE OR ALTER PROCEDURE AddLanguage
+@lName VARCHAR(50)
+AS 
+BEGIN
+    INSERT INTO Language(LanguageName)
+	VALUES(@lName)
+END 
+GO
+
+EXEC AddLanguage 'English'
+EXEC AddLanguage 'Spanish'
+EXEC AddLanguage 'French'
+SELECT * FROM Language
+
+
+GO
+CREATE OR ALTER PROCEDURE AddDirector
+@DName VARCHAR(50)
+AS 
+BEGIN
+    INSERT INTO Director(DirectorName)
+	VALUES(@DName)
+END 
+GO
+
+EXEC AddDirector 'Joss Whedon'
+EXEC AddDirector 'Christopher Nolan'
+EXEC AddDirector 'Frank Darabont'
+SELECT * FROM Director
+
+
+GO
+CREATE OR ALTER PROCEDURE AddCity
+@CName VARCHAR(50)
+AS 
+BEGIN
+    INSERT INTO City(CityName)
+	VALUES(@CName)
+END 
+GO
+
+EXEC AddCity 'Mumbai'
+EXEC AddCity 'Delhi'
+EXEC AddCity 'Bangalore'
+SELECT * FROM City
+
+GO
+CREATE OR ALTER PROCEDURE AddSeatCategory
+@SName VARCHAR(50),
+@price INT
+AS 
+BEGIN
+    INSERT INTO SeatCategory(SeatCatName,Price)
+	VALUES(@SName,@price)
+END 
+GO
+
+EXEC AddSeatCategory 'Gold',1000
+EXEC AddSeatCategory 'Silver',800
+EXEC AddSeatCategory 'Platinum',1200
+SELECT * FROM SeatCategory
+
+CREATE TYPE IDs AS TABLE(
+	Id INT
+)
+
+GO
+CREATE OR ALTER PROCEDURE AddMovie
+@title VARCHAR(50),
+@duration INT,
+@date DateTime,
+@directorID INT,
+@LID INT,
+@GID INT
+AS 
+BEGIN
+    INSERT INTO Movie(Title,Duration,ReleaseDate)
+	VALUES(@title,@duration,@date)
+	DECLARE @movieID int = SCOPE_IDENTITY()
+
+	INSERT INTO DirectorMovie(DirectorID,MovieID)
+    VALUES (@directorID,@movieID)
+
+	DECLARE @inserted Table (
+    InsertedId INT
+   )
+
+
+END 
+GO
+
+--EXEC AddMovie 'The Avengers',180,'2022-05-01'
+--EXEC AddMovie 'Inception',148,'2010-07-16'
+--EXEC AddMovie 'The Shawshank Redemption',142,'1994-09-22'
+
+
+CREATE TYPE Screen AS TABLE
+(
+  [ScreenName] VARCHAR(30)
+)
+GO
+CREATE TYPE Seat AS TABLE
+(
+  [ScreenName] VARCHAR(30),
+  [SeatNum] VARCHAR(30),
+  SeatCategoryId INT 
+)
+GO
+
+CREATE OR ALTER PROCEDURE AddTheatre
+@Name VARCHAR(30),
+@cityID int,
+@phone BIGINT,
+@screens AS Screen READONLY,
+@theatreseats AS Seat READONLY
+AS 
+BEGIN
+   INSERT INTO Theatre(TheatreName,CityID,Phone) VALUES(@Name,@cityID,@phone)
+   DECLARE @theatreID int = SCOPE_IDENTITY()
+
+   DECLARE @inserted Table (
+    InsertedId INT,
+    InsertedName varchar(30)
+   )
+
+   INSERT INTO Screen (ScreenName,TheatreID) 
+   OUTPUT inserted.ScreenID,inserted.ScreenName INTO @inserted
+   SELECT [ScreenName],@theatreID FROM @screens
+      
+   INSERT INTO Seat(SeatNumber,SeatCatID,ScreenID)
+   SELECT ts.SeatNum,ts.SeatCategoryId,i.InsertedId
+   FROM @theatreseats ts
+   INNER JOIN @inserted i 
+    ON i.InsertedName = ts.ScreenName
+END
+
+GO
+DECLARE @i Screen
+INSERT INTO @i([ScreenName])
+SELECT 'Screen 1'
+UNION ALL 
+SELECT 'Screen 2'
+DECLARE @j Seat
+INSERT INTO @j([ScreenName],[SeatNum],SeatCategoryId)
+SELECT 'Screen 1','A1',700
+UNION ALL  
+SELECT 'Screen 1','A2',700
+UNION ALL 
+SELECT 'Screen 2','B1',701
+UNION ALL 
+SELECT 'Screen 2','B2',701
+EXEC AddTheatre @Name='Regal Cinemas',@cityID=201, @phone=9999999999,@screens = @i,@theatreseats = @j;
+
+GO
+DECLARE @m Screen
+INSERT INTO @m([ScreenName])
+SELECT 'Screen 1'
+UNION ALL 
+SELECT 'Screen 2'
+DECLARE @n Seat
+INSERT INTO @n([ScreenName],[SeatNum],SeatCategoryId)
+SELECT 'Screen 1','C1',702
+UNION ALL  
+SELECT 'Screen 1','C2',702
+UNION ALL 
+SELECT 'Screen 2','D1',701
+UNION ALL 
+SELECT 'Screen 2','D2',701
+EXEC AddTheatre @Name='AMC Theaters',@cityID=202, @phone=8888888888,@screens = @m,@theatreseats = @n;
+
+SELECT * FROM City
+SELECT * FROM Theatre
+SELECT * FROM Seat
+SELECT * FROM Screen
+SELECT * FROM SeatCategory
+SELECT * FROM Movie
+SELECT * FROM Genre
+SELECT * FROM Language
+SELECT * FROM DirectorMovie
+SELECT * FROM Director
