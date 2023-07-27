@@ -1,0 +1,15 @@
+C:\Users\CQ-Aisha\source\repos\DisplaySports\DisplaySports\bin\Debug\net6.0\DisplaySports.exe
+C:\Users\CQ-Aisha\source\repos\DisplaySports\DisplaySports\bin\Debug\net6.0\DisplaySports.deps.json
+C:\Users\CQ-Aisha\source\repos\DisplaySports\DisplaySports\bin\Debug\net6.0\DisplaySports.runtimeconfig.json
+C:\Users\CQ-Aisha\source\repos\DisplaySports\DisplaySports\bin\Debug\net6.0\DisplaySports.dll
+C:\Users\CQ-Aisha\source\repos\DisplaySports\DisplaySports\bin\Debug\net6.0\DisplaySports.pdb
+C:\Users\CQ-Aisha\source\repos\DisplaySports\DisplaySports\obj\Debug\net6.0\DisplaySports.csproj.AssemblyReference.cache
+C:\Users\CQ-Aisha\source\repos\DisplaySports\DisplaySports\obj\Debug\net6.0\DisplaySports.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CQ-Aisha\source\repos\DisplaySports\DisplaySports\obj\Debug\net6.0\DisplaySports.AssemblyInfoInputs.cache
+C:\Users\CQ-Aisha\source\repos\DisplaySports\DisplaySports\obj\Debug\net6.0\DisplaySports.AssemblyInfo.cs
+C:\Users\CQ-Aisha\source\repos\DisplaySports\DisplaySports\obj\Debug\net6.0\DisplaySports.csproj.CoreCompileInputs.cache
+C:\Users\CQ-Aisha\source\repos\DisplaySports\DisplaySports\obj\Debug\net6.0\DisplaySports.dll
+C:\Users\CQ-Aisha\source\repos\DisplaySports\DisplaySports\obj\Debug\net6.0\refint\DisplaySports.dll
+C:\Users\CQ-Aisha\source\repos\DisplaySports\DisplaySports\obj\Debug\net6.0\DisplaySports.pdb
+C:\Users\CQ-Aisha\source\repos\DisplaySports\DisplaySports\obj\Debug\net6.0\DisplaySports.genruntimeconfig.cache
+C:\Users\CQ-Aisha\source\repos\DisplaySports\DisplaySports\obj\Debug\net6.0\ref\DisplaySports.dll
