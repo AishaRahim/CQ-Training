@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\CQ-Aisha\\source\\repos\\CQ-Training\\C# Assignments\\26_07_2023 Assignments\\A2\\DisplaySports\\DisplaySports\\DisplaySports.csproj",
-      "projectName": "DisplaySports",
-      "projectPath": "C:\\Users\\CQ-Aisha\\source\\repos\\CQ-Training\\C# Assignments\\26_07_2023 Assignments\\A2\\DisplaySports\\DisplaySports\\DisplaySports.csproj",
+      "projectUniqueName": "C:\\Users\\CQ-Aisha\\source\\repos\\CQ-Training\\C# Assignments\\26_07_2023 Assignments\\A3\\ExtensionMethod\\ExtensionMethod.csproj",
+      "projectName": "ExtensionMethod",
+      "projectPath": "C:\\Users\\CQ-Aisha\\source\\repos\\CQ-Training\\C# Assignments\\26_07_2023 Assignments\\A3\\ExtensionMethod\\ExtensionMethod.csproj",
       "packagesPath": "C:\\Users\\CQ-Aisha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\CQ-Aisha\\source\\repos\\CQ-Training\\C# Assignments\\26_07_2023 Assignments\\A2\\DisplaySports\\DisplaySports\\obj\\",
+      "outputPath": "C:\\Users\\CQ-Aisha\\source\\repos\\CQ-Training\\C# Assignments\\26_07_2023 Assignments\\A3\\ExtensionMethod\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\CQ-Aisha\\AppData\\Roaming\\NuGet\\NuGet.Config",

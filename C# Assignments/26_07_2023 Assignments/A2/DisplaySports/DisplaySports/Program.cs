@@ -1,8 +1,4 @@
-﻿public class Program
-{
-    private static void Main(string[] args)
-    {       
-        try
+﻿try
         {
             char ch;
             Console.WriteLine("Enter a character");
@@ -44,5 +40,4 @@
         {
             Console.WriteLine("\nError: " + ex.Message);
         }
-    }
-}
+
