@@ -1,4 +1,5 @@
-﻿MyGenericComparer<int> comparer = new MyGenericComparer<int>();
+﻿
+MyGenericComparer<int> comparer = new MyGenericComparer<int>();
 int largestInt = comparer.Compare(10, 20);
 Console.WriteLine("Largest integer: " + largestInt);
 
