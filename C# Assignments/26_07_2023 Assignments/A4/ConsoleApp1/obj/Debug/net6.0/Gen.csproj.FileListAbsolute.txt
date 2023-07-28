@@ -1,0 +1,15 @@
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A4\ConsoleApp1\bin\Debug\net6.0\Gen.exe
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A4\ConsoleApp1\bin\Debug\net6.0\Gen.deps.json
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A4\ConsoleApp1\bin\Debug\net6.0\Gen.runtimeconfig.json
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A4\ConsoleApp1\bin\Debug\net6.0\Gen.dll
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A4\ConsoleApp1\bin\Debug\net6.0\Gen.pdb
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A4\ConsoleApp1\obj\Debug\net6.0\Gen.csproj.AssemblyReference.cache
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A4\ConsoleApp1\obj\Debug\net6.0\Gen.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A4\ConsoleApp1\obj\Debug\net6.0\Gen.AssemblyInfoInputs.cache
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A4\ConsoleApp1\obj\Debug\net6.0\Gen.AssemblyInfo.cs
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A4\ConsoleApp1\obj\Debug\net6.0\Gen.csproj.CoreCompileInputs.cache
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A4\ConsoleApp1\obj\Debug\net6.0\Gen.dll
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A4\ConsoleApp1\obj\Debug\net6.0\refint\Gen.dll
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A4\ConsoleApp1\obj\Debug\net6.0\Gen.pdb
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A4\ConsoleApp1\obj\Debug\net6.0\Gen.genruntimeconfig.cache
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A4\ConsoleApp1\obj\Debug\net6.0\ref\Gen.dll
