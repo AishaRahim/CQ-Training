@@ -1,0 +1,15 @@
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A3\ExtensionMethod\obj\Debug\net6.0\ExtensionMethod.csproj.AssemblyReference.cache
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A3\ExtensionMethod\obj\Debug\net6.0\ExtensionMethod.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A3\ExtensionMethod\obj\Debug\net6.0\ExtensionMethod.AssemblyInfoInputs.cache
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A3\ExtensionMethod\obj\Debug\net6.0\ExtensionMethod.AssemblyInfo.cs
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A3\ExtensionMethod\obj\Debug\net6.0\ExtensionMethod.csproj.CoreCompileInputs.cache
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A3\ExtensionMethod\bin\Debug\net6.0\ExtensionMethod.exe
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A3\ExtensionMethod\bin\Debug\net6.0\ExtensionMethod.deps.json
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A3\ExtensionMethod\bin\Debug\net6.0\ExtensionMethod.runtimeconfig.json
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A3\ExtensionMethod\bin\Debug\net6.0\ExtensionMethod.dll
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A3\ExtensionMethod\bin\Debug\net6.0\ExtensionMethod.pdb
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A3\ExtensionMethod\obj\Debug\net6.0\ExtensionMethod.dll
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A3\ExtensionMethod\obj\Debug\net6.0\refint\ExtensionMethod.dll
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A3\ExtensionMethod\obj\Debug\net6.0\ExtensionMethod.pdb
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A3\ExtensionMethod\obj\Debug\net6.0\ExtensionMethod.genruntimeconfig.cache
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A3\ExtensionMethod\obj\Debug\net6.0\ref\ExtensionMethod.dll
