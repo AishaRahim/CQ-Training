@@ -1,0 +1,15 @@
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A6\A6\bin\Debug\net6.0\A6.exe
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A6\A6\bin\Debug\net6.0\A6.deps.json
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A6\A6\bin\Debug\net6.0\A6.runtimeconfig.json
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A6\A6\bin\Debug\net6.0\A6.dll
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A6\A6\bin\Debug\net6.0\A6.pdb
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A6\A6\obj\Debug\net6.0\A6.csproj.AssemblyReference.cache
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A6\A6\obj\Debug\net6.0\A6.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A6\A6\obj\Debug\net6.0\A6.AssemblyInfoInputs.cache
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A6\A6\obj\Debug\net6.0\A6.AssemblyInfo.cs
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A6\A6\obj\Debug\net6.0\A6.csproj.CoreCompileInputs.cache
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A6\A6\obj\Debug\net6.0\A6.dll
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A6\A6\obj\Debug\net6.0\refint\A6.dll
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A6\A6\obj\Debug\net6.0\A6.pdb
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A6\A6\obj\Debug\net6.0\A6.genruntimeconfig.cache
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\26_07_2023 Assignments\A6\A6\obj\Debug\net6.0\ref\A6.dll
