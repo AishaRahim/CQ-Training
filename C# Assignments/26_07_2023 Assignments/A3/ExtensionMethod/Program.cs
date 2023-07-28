@@ -6,7 +6,7 @@ string inputText =Console.ReadLine();
 Console.WriteLine("Enter the word:");
 string wordToCount = Console.ReadLine();
 
-int count = StringExtension.IsWordCount(inputText,wordToCount);
+int count = inputText.IsWordCount(wordToCount);
 Console.WriteLine($"The word '{wordToCount}' appears {count} times in the input text.");
 
 
