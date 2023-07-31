@@ -1,3 +1,6 @@
+function Movie()
+{
+    const movies=
 [
     {
       "MovieName": "The Great Adventure",
@@ -29,7 +32,9 @@
       "ActorName": "Olivia Wilson",
       "ReleaseDate": "2022-12-19"
     }
-]
-  
+]  
 
 // List the movie name along with the actor name of those movies released in the year 2022
+const year2022 = movies.filter(x => x.ReleaseDate.startsWith('2022')).map(y => `Movie: ${y.MovieName}, Actor: ${y.ActorName}`);
+console.log(year2022);
+}
