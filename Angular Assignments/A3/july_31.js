@@ -81,11 +81,17 @@ const NewArray = movies.slice(indx);
 console.log("8) Create a new array starting from the movie City of Shadows",NewArray);
 
 // 9)List the distinct actor names in array
-const actorSet = new Set();
-movies.forEach(x => actorSet.add(x.ActorName));
-const distinctActors = Array.from(actorSet, actorName => ({ ActorName: actorName }));
+const ActorList = [];
+movies.forEach(x => x.ActorName)
+{
+  const actor = movies.ActorName;
+  if(!ActorList.includes(actor))
+  {
+    ActorList.push(actor);
+  }
+}
+const distinctActors = ActorList.map(actor => ({ActorName : actor}));
 console.log("9) List the distinct actor names in array",distinctActors);
-
 
 // 10)Insert an element
 // 		{
