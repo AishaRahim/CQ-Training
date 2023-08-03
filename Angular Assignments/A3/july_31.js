@@ -76,8 +76,14 @@ console.log("6) Updated array is : ",movies);
 console.log("Inserted element is: ",insertElement);
 
 // 7)Check whether there exists any duplicate movie names present in the array
-const duplicate = movies.some(x => x.MovieName===(y => y.MovieName));
-console.log("7) Check whether there exists any duplicate movie names present in the array",duplicate);
+const duplicate = movies.some((x,index) =>
+{
+  return movies.some((y,innerindex) =>
+  {
+    return index!==innerindex && x.MovieName === y.MovieName;
+  });
+});
+console.log("7) Check whether there exists any duplicate movie names present in the array: ",duplicate);
 
 // 8)Create a new array starting from the movie "City of Shadows"
 const indx = movies.findIndex(x =>x.MovieName==="City of Shadows");
