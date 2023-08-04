@@ -52,11 +52,11 @@ namespace ADONET
             paramReturn.SqlDbType = System.Data.SqlDbType.Int;
             paramReturn.Direction = System.Data.ParameterDirection.ReturnValue; 
 
-            cmd.Parameters.Add(paramName);
+            cmd.Parameters.Add(paramName);
             cmd.Parameters.Add(paramAddress);
             cmd.Parameters.Add(paramClassName);
             cmd.Parameters.Add(paramMark);
-          cmd.Parameters.Add(paramReturn);
+            cmd.Parameters.Add(paramReturn);
             cmd.ExecuteNonQuery();
             con.Close();    
             int retvalue = (int)paramReturn.Value;
@@ -79,7 +79,6 @@ namespace ADONET
             paramId.Value = Id;
             paramId.SqlDbType = System.Data.SqlDbType.Int;
             cmd.Parameters.Add(paramId);
-            //paramAddress.Size = 50;
 
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
