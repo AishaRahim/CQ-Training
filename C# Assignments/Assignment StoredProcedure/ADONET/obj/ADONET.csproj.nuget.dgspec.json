@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\CQ-Aisha\\source\\repos\\CQ-Training\\C# Assignments\\26_07_2023 Assignments\\A6\\ADONET\\ADONET.csproj": {}
+    "C:\\Users\\CQ-Aisha\\source\\repos\\CQ-Training\\C# Assignments\\Assignment StoredProcedure\\ADONET\\ADONET.csproj": {}
   },
   "projects": {
-    "C:\\Users\\CQ-Aisha\\source\\repos\\CQ-Training\\C# Assignments\\26_07_2023 Assignments\\A6\\ADONET\\ADONET.csproj": {
+    "C:\\Users\\CQ-Aisha\\source\\repos\\CQ-Training\\C# Assignments\\Assignment StoredProcedure\\ADONET\\ADONET.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CQ-Aisha\\source\\repos\\CQ-Training\\C# Assignments\\26_07_2023 Assignments\\A6\\ADONET\\ADONET.csproj",
+        "projectUniqueName": "C:\\Users\\CQ-Aisha\\source\\repos\\CQ-Training\\C# Assignments\\Assignment StoredProcedure\\ADONET\\ADONET.csproj",
         "projectName": "ADONET",
-        "projectPath": "C:\\Users\\CQ-Aisha\\source\\repos\\CQ-Training\\C# Assignments\\26_07_2023 Assignments\\A6\\ADONET\\ADONET.csproj",
+        "projectPath": "C:\\Users\\CQ-Aisha\\source\\repos\\CQ-Training\\C# Assignments\\Assignment StoredProcedure\\ADONET\\ADONET.csproj",
         "packagesPath": "C:\\Users\\CQ-Aisha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CQ-Aisha\\source\\repos\\CQ-Training\\C# Assignments\\26_07_2023 Assignments\\A6\\ADONET\\obj\\",
+        "outputPath": "C:\\Users\\CQ-Aisha\\source\\repos\\CQ-Training\\C# Assignments\\Assignment StoredProcedure\\ADONET\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\CQ-Aisha\\AppData\\Roaming\\NuGet\\NuGet.Config",
