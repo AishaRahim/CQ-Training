@@ -9,7 +9,7 @@ namespace WebApplication3.Controllers
     {
         [HttpPost]
 
-        public void StdInsert(string name,string address, string Class, double Mark) 
+        public void StdInsert(string name,string address, string Class, int Mark) 
         {
             StudentOper studentOper = new StudentOper();
             Student student = new Student();
@@ -24,10 +24,11 @@ namespace WebApplication3.Controllers
 
         [HttpGet]
 
-        public void StdGet(int id) 
+        public IActionResult StdGet(int id) 
         {
             StudentOper studentOper = new StudentOper();
-            studentOper.GetDetails(id);
+            var o = studentOper.GetDetails(id);
+            return Ok(o);
 
         }
 

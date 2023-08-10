@@ -24,7 +24,7 @@ namespace WebApplication3
             paramName.ParameterName = "@name";
             paramName.Value = student.Name;
             paramName.SqlDbType = System.Data.SqlDbType.VarChar;
-            paramName.Size = 15;
+            paramName.Size = 50;
 
             SqlParameter paramAddress = new SqlParameter();
             paramAddress.ParameterName = "@address";
@@ -36,7 +36,7 @@ namespace WebApplication3
             paramClassName.ParameterName = "@class";
             paramClassName.Value = student.Class;
             paramClassName.SqlDbType = System.Data.SqlDbType.VarChar;
-            paramClassName.Size = 5;
+            paramClassName.Size = 50;
 
             SqlParameter paramMark = new SqlParameter();
             paramMark.ParameterName = "@mark";
@@ -58,7 +58,7 @@ namespace WebApplication3
             return retvalue;
         }
 
-        public void GetDetails(int Id)
+        public Student GetDetails(int Id)
         {
             SqlConnection con = new SqlConnection(connectionString);
             con.Open();
@@ -76,13 +76,26 @@ namespace WebApplication3
             cmd.Parameters.Add(paramId);
 
             SqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
+            //while (reader.Read())
+            //{
+            //    for (int i = 0; i < reader.FieldCount; i++)
+            //    {
+            //        Console.WriteLine(reader[i]);
+            //    }
+            //}
+
+            Student returnObj = new Student();
+            if (reader.Read())
             {
-                for (int i = 0; i < reader.FieldCount; i++)
-                {
-                    Console.WriteLine(reader[i]);
-                }
+                returnObj.Name = reader["NameOfStudent"].ToString();
+                returnObj.Address = reader["Address"].ToString();
+                returnObj.Class = reader["class"].ToString();
+                returnObj.Mark = (int)reader["Mark"];
+                returnObj.Id = Id;
+
             }
+
+            return returnObj;
             con.Close();
         
         }
