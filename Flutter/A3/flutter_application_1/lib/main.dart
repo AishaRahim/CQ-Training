@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(title: const Text('DISPLAY')),
         body: const Center(child: Text('Hello World')),
+        //description yet to add
       
       )
     );
