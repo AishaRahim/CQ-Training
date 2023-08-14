@@ -107,12 +107,16 @@ class MyWidget extends StatelessWidget {
             // onPressed: () {
             //   print('button pressed');
             // },
-            ElevatedButton.icon(
-              onPressed: (){
-                print('button pressed');
-              },
-              icon: const Icon(Icons.download,size: 30,color: Colors.black,),
-              label: const Text("DOWNLOAD"),
+            SizedBox(
+              height: 30,
+              width: 400,
+              child: ElevatedButton.icon(
+                onPressed: (){
+                  print('button pressed');
+                },
+                icon: const Icon(Icons.download,size: 30,color: Colors.black,),
+                label: const Text("DOWNLOAD"),
+              ),
             )
           ],
         ),
