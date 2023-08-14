@@ -30,11 +30,13 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.yellow,
       body: Container(
+        width: 350,
         padding: const EdgeInsets.all(12),
         margin: const EdgeInsets.all(20),
         color: Colors.white,
         child: const Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text('HEADER',
             style: TextStyle(
