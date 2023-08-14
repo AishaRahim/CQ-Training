@@ -34,6 +34,7 @@ class MyHomePage extends StatelessWidget {
         margin: const EdgeInsets.all(20),
         color: Colors.white,
         child: const Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('HEADER',
             style: TextStyle(
@@ -44,7 +45,7 @@ class MyHomePage extends StatelessWidget {
             ),
             ),
             
-            Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore',
+            Text('Lorem ipsum dolor sit amet, consectetur adipi scing elit, sed do eiusmod tempor incididunt ut labore et dolore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore',
               style: TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.normal,
@@ -52,7 +53,7 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 16),
-            Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore',
+            Text('Lorem ipsum dolor sit amet, consectetur adipi scing elit, sed do eiusmod tempor incididunt ut labore et dolore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore',
               style: TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.normal,
@@ -60,7 +61,7 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 16),
-            Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore',
+            Text("Lorem ipsum dolor sit amet, consectetur adipi scing elit, sed do eiusmod tempor incididunt ut labore et dolore Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
               style: TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.normal,
