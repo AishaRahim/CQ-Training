@@ -1,0 +1,14 @@
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\API Assignment\EmployeeApplication.Model\bin\Debug\net6.0\EmployeeApplicationModel.deps.json
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\API Assignment\EmployeeApplication.Model\bin\Debug\net6.0\EmployeeApplicationModel.runtimeconfig.json
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\API Assignment\EmployeeApplication.Model\bin\Debug\net6.0\EmployeeApplicationModel.dll
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\API Assignment\EmployeeApplication.Model\bin\Debug\net6.0\EmployeeApplicationModel.pdb
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\API Assignment\EmployeeApplication.Model\obj\Debug\net6.0\EmployeeApplicationModel.csproj.AssemblyReference.cache
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\API Assignment\EmployeeApplication.Model\obj\Debug\net6.0\EmployeeApplicationModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\API Assignment\EmployeeApplication.Model\obj\Debug\net6.0\EmployeeApplicationModel.AssemblyInfoInputs.cache
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\API Assignment\EmployeeApplication.Model\obj\Debug\net6.0\EmployeeApplicationModel.AssemblyInfo.cs
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\API Assignment\EmployeeApplication.Model\obj\Debug\net6.0\EmployeeApplicationModel.csproj.CoreCompileInputs.cache
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\API Assignment\EmployeeApplication.Model\obj\Debug\net6.0\EmployeeApplicationModel.dll
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\API Assignment\EmployeeApplication.Model\obj\Debug\net6.0\refint\EmployeeApplicationModel.dll
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\API Assignment\EmployeeApplication.Model\obj\Debug\net6.0\EmployeeApplicationModel.pdb
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\API Assignment\EmployeeApplication.Model\obj\Debug\net6.0\EmployeeApplicationModel.genruntimeconfig.cache
+C:\Users\CQ-Aisha\source\repos\CQ-Training\C# Assignments\API Assignment\EmployeeApplication.Model\obj\Debug\net6.0\ref\EmployeeApplicationModel.dll
