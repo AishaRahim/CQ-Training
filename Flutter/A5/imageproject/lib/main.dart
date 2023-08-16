@@ -38,41 +38,59 @@ class MyWidget extends StatelessWidget {
       body: Container(
         padding: const EdgeInsets.all(12),
         margin: const EdgeInsets.all(15),            
-        child: Column(            
-          children: [    
-            ClipOval(
-              child:Image.asset('assets/image.png',            
-              width: 100,            
-              height: 100,            
-              fit: BoxFit.cover,            
-              )
-            ),
-            const Text('Name: Mahatma Gandhi',
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold
-            ),),
-            InkWell(
-              onTap: () {
-                print("bapu@yahoo.com");
-              },
-              child: const Text("Mail ID",style: TextStyle(fontWeight: FontWeight.bold),),
-            ),
-            const Text("PH: 2553366"),
-            const SizedBox(height: 15,),
-      
-            TextFormField(
-              decoration: const InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'Type Something',
+        child: SingleChildScrollView(
+          child: Column(            
+            children: [    
+              ClipOval(
+                child:Image.asset('assets/image.png',            
+                width: 150,            
+                height: 150,            
+                fit: BoxFit.cover,            
+                )
               ),
-            ),
-            const SizedBox(height: 15),
-      
-            SizedBox(
-              width: 100,
-              height: 100, 
-              child: Container(
+              const SizedBox(height: 30),
+              Container(
+                padding: const EdgeInsets.all(10),
+                color: Colors.purple[50],
+                child: const Text('Name: Mahatma Gandhi',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold
+                ),),
+              ),
+              const SizedBox(height: 20),
+              Container(
+                padding: const EdgeInsets.all(10),
+                color: Colors.purple[50],
+                child: InkWell(
+                  onTap: () {
+                    print("bapu@yahoo.com");
+                  },
+                  child: const Text("Mail ID",style: TextStyle(
+                    fontWeight: FontWeight.bold,fontSize: 20,
+                    fontStyle: FontStyle.italic
+                    ),),
+                ),
+              ),
+              const SizedBox(height: 20),
+              Container(
+                padding: const EdgeInsets.all(10),
+                color: Colors.pink[100],
+                child: const Text("PH: 2553366"),
+                ),
+              const SizedBox(height: 20),
+              
+              TextFormField(
+                decoration: const InputDecoration(
+                  border: OutlineInputBorder(),
+                  hintText: 'Type Something',
+                ),
+              ),
+              const SizedBox(height: 20),
+              
+              Container(
+                width: 50,
+                height: 50,
                 decoration: const BoxDecoration(
                   boxShadow: [
                     BoxShadow(
@@ -90,35 +108,35 @@ class MyWidget extends StatelessWidget {
                     ],
                   ),
                 ),
-              )
-            ),
-
-            const SizedBox(height: 15),          
-
-            // ElevatedButton(
-            // child: const Row(
-            //   mainAxisAlignment: MainAxisAlignment.center,
-            //   children: [
-            //     Icon(Icons.download,size: 30,color: Colors.black,),
-            //     SizedBox(width: 15,),
-            //     Text('DOWNLOAD')
-            //   ],
-            // ),  
-            // onPressed: () {
-            //   print('button pressed');
-            // },
-            SizedBox(
-              height: 30,
-              width: 400,
-              child: ElevatedButton.icon(
-                onPressed: (){
-                  print('button pressed');
-                },
-                icon: const Icon(Icons.download,size: 30,color: Colors.black,),
-                label: const Text("DOWNLOAD"),
               ),
-            )
-          ],
+        
+              const SizedBox(height: 20),          
+        
+              // ElevatedButton(
+              // child: const Row(
+              //   mainAxisAlignment: MainAxisAlignment.center,
+              //   children: [
+              //     Icon(Icons.download,size: 30,color: Colors.black,),
+              //     SizedBox(width: 15,),
+              //     Text('DOWNLOAD')
+              //   ],
+              // ),  
+              // onPressed: () {
+              //   print('button pressed');
+              // },
+              SizedBox(
+                height: 30,
+                width: 400,
+                child: ElevatedButton.icon(
+                  onPressed: (){
+                    print('button pressed');
+                  },
+                  icon: const Icon(Icons.download,size: 30,color: Colors.black,),
+                  label: const Text("DOWNLOAD"),
+                ),
+              )
+            ],
+          ),
         ),
       )
     );

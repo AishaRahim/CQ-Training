@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\CQ-Aisha\\source\\repos\\EmployeeManagement\\EmployeeManagement\\EmployeeManagement.csproj",
+      "projectUniqueName": "C:\\Users\\CQ-Aisha\\source\\repos\\CQ-Training\\C# Assignments\\EmployeeManagement\\EmployeeManagement\\EmployeeManagement.csproj",
       "projectName": "EmployeeManagement",
-      "projectPath": "C:\\Users\\CQ-Aisha\\source\\repos\\EmployeeManagement\\EmployeeManagement\\EmployeeManagement.csproj",
+      "projectPath": "C:\\Users\\CQ-Aisha\\source\\repos\\CQ-Training\\C# Assignments\\EmployeeManagement\\EmployeeManagement\\EmployeeManagement.csproj",
       "packagesPath": "C:\\Users\\CQ-Aisha\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\CQ-Aisha\\source\\repos\\EmployeeManagement\\EmployeeManagement\\obj\\",
+      "outputPath": "C:\\Users\\CQ-Aisha\\source\\repos\\CQ-Training\\C# Assignments\\EmployeeManagement\\EmployeeManagement\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\CQ-Aisha\\AppData\\Roaming\\NuGet\\NuGet.Config",
