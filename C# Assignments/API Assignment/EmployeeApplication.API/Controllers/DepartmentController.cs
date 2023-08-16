@@ -39,23 +39,29 @@ namespace EmployeeApplication.API.Controllers
         [HttpGet("GetById")]
         public IActionResult Get(int id)
         {
-            Department department = new Department();
             return Ok(dbContext?.Department.Find(id));
         }
 
         [HttpGet("GetAll")]
         public IActionResult GetAll()
         {
-            Department department = new Department();
             return Ok(dbContext?.Department);
         }
 
         [HttpPut("Update")]
-        public void put(int id,string name)
+        public void put(DepartmentClone departmentClone,int id)
         {
-            var x = dbContext?.Location.Find(id);
-            x!.Name = name;
+            var x = dbContext?.Department.Find(id);
+            x.Name = departmentClone.Name;
+            x.locationId = departmentClone.locationId;
             dbContext?.SaveChanges();
         }
+
+        //public void put(int id, string name)
+        //{
+        //    var x = dbContext?.Location.Find(id);
+        //    x!.Name = name;
+        //    dbContext?.SaveChanges();
+        //}
     }
 }

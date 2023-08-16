@@ -42,7 +42,6 @@ namespace EmployeeApplication.API.Controllers
         [HttpGet("GetById")]
         public IActionResult Get(int id)
         {
-            Employee employee = new Employee();
             return Ok(dbContext?.Employees.Find(id));
         }
 
@@ -51,7 +50,6 @@ namespace EmployeeApplication.API.Controllers
         [HttpGet("GetAll")]
         public IActionResult GetAll()
         {
-            Employee employee = new Employee();
             return Ok(dbContext?.Employees);
         }
 
