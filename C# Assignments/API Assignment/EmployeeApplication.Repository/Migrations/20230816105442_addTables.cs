@@ -5,7 +5,7 @@
 namespace EmployeeApplication.Repository.Migrations
 {
     /// <inheritdoc />
-    public partial class addtables : Migration
+    public partial class addTables : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -52,7 +52,7 @@ namespace EmployeeApplication.Repository.Migrations
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     EMail = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Phone = table.Column<int>(type: "int", nullable: false),
                     departmentId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>

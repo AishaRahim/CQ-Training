@@ -17,22 +17,40 @@ namespace EmployeeApplication.API.Controllers
         }
 
         [HttpPost("AddLocation")]
-
-        public void post(string Name)
+        public void post(Location location)
         {
-            Location location = new Location();
-            location.Name = Name;
             dbContext?.Add(location);
             dbContext?.SaveChanges();
         }
 
         [HttpDelete("Delete")]
-
         public void delete(int id)
         {
             Location location = new Location();
             location.Id = id;
             dbContext?.Remove(location);
+            dbContext?.SaveChanges();
+        }
+
+        [HttpGet("GetById")]
+        public IActionResult Get(int id) 
+        {
+            Location location = new Location();
+            return Ok(dbContext?.Location.Find(id));
+        }
+
+        [HttpGet("GetAll")] 
+        public IActionResult GetAll() 
+        {
+            Location location = new Location();
+            return Ok(dbContext?.Location);
+        }
+
+        [HttpPut]
+        public void put(int id, string name) 
+        {
+            var x = dbContext?.Location.Find(id);
+            x!.Name = name;
             dbContext?.SaveChanges();
         }
     }

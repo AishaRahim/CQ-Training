@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmployeeApplication.Repository.Migrations
 {
     [DbContext(typeof(EmployeeApplicationContext))]
-    [Migration("20230814131654_addtables")]
-    partial class addtables
+    [Migration("20230816105442_addTables")]
+    partial class addTables
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -66,9 +66,8 @@ namespace EmployeeApplication.Repository.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Phone")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Phone")
+                        .HasColumnType("int");
 
                     b.Property<int>("departmentId")
                         .HasColumnType("int");

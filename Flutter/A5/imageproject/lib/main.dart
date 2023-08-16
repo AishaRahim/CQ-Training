@@ -43,9 +43,9 @@ class MyWidget extends StatelessWidget {
             children: [    
               ClipOval(
                 child:Image.asset('assets/image.png',            
-                width: 150,            
+                width: 200,            
                 height: 150,            
-                fit: BoxFit.cover,            
+                fit: BoxFit.fill,            
                 )
               ),
               const SizedBox(height: 30),
@@ -81,6 +81,7 @@ class MyWidget extends StatelessWidget {
               const SizedBox(height: 20),
               
               TextFormField(
+                keyboardType: TextInputType.number,
                 decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   hintText: 'Type Something',
@@ -125,8 +126,8 @@ class MyWidget extends StatelessWidget {
               //   print('button pressed');
               // },
               SizedBox(
-                height: 30,
-                width: 400,
+                height: 50,
+                width: 250,
                 child: ElevatedButton.icon(
                   onPressed: (){
                     print('button pressed');
