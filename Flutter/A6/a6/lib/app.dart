@@ -1,0 +1,292 @@
+// ignore_for_file: avoid_print
+
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class ScreenWidget extends StatefulWidget {
+  const ScreenWidget({super.key});
+
+  @override
+  State<ScreenWidget> createState() => _ScreenWidgetState();
+}
+
+class _ScreenWidgetState extends State<ScreenWidget> {
+  final TextEditingController usernameController = TextEditingController();
+
+  final TextEditingController emailController = TextEditingController();
+
+  final TextEditingController passwordController = TextEditingController();
+  bool passwordVisible = false; 
+
+  @override
+  Widget build(BuildContext context) {
+
+    void select() {
+      passwordVisible = !passwordVisible;
+    }
+
+
+    return Scaffold(
+      appBar: AppBar(
+        leading: SvgPicture.asset(
+                    'assets/image/Group15.svg',
+                    width: 60,
+                    height: 60,
+                  ),
+        actions: [
+            Container(
+              padding: const EdgeInsets.fromLTRB(0, 0, 30, 0),
+              child: Image.asset(
+                'assets/image/act.png',
+                width: 50,
+                height: 50,
+              ),
+            ),
+          ],       
+                    
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              padding: const EdgeInsets.fromLTRB(33, 0, 33, 0),
+                child: Image.asset('assets/image/girl.png',
+                width: 362,
+                height: 263.273,
+                ),
+              ),
+      
+            Container(
+                  width: 428,
+                  height: 500,
+                  padding: const EdgeInsets.fromLTRB(14, 25, 14, 0),
+                  decoration: const BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [                      
+                        Color(0xff4063D7),
+                        Color(0xff204EFA)
+                      ],
+                    ),
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(50),
+                      topRight: Radius.circular(50)
+                    )
+                  ),
+      
+                  child: Column(
+                    children: [
+                      Text('SIGN UP',
+                      style: GoogleFonts.poppins(textStyle: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 25,
+                        letterSpacing: .75,
+                        fontWeight: FontWeight.w700,
+                        
+                      )),
+                      textAlign: TextAlign.center,
+                      ),
+      
+                      Container(
+                        padding: const EdgeInsets.all(10),
+                        child: TextField(
+                          controller: usernameController,
+                          keyboardType: TextInputType.name,
+                          decoration: InputDecoration(
+                            prefixIcon: Padding(
+                              padding: const EdgeInsets.fromLTRB(32, 0, 24, 0),
+                              child: SvgPicture.asset('assets/image/profile.svg',
+                              width: 16.2,
+                              height: 18,
+                              ),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30),
+                              borderSide: const BorderSide(
+                                color: Color(0xff97BDFF)
+                              )
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30),
+                              borderSide: const BorderSide(
+                                color: Color(0xff97BDFF)
+                              )
+                            ),
+                            
+                            hintText: 'Username',
+                            hintStyle: GoogleFonts.poppins(textStyle: const TextStyle(
+                              fontSize: 12,
+                              color: Color(0xff97BDFF),
+                              fontStyle: FontStyle.normal
+                            ))
+                          ),
+                        ),
+      
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(10),
+                        child: TextField(
+                          controller: emailController,
+                          keyboardType: TextInputType.name,
+                          decoration: InputDecoration(
+                            prefixIcon: Padding(
+                              padding: const EdgeInsets.fromLTRB(32, 0, 24, 0),
+                              child: SvgPicture.asset('assets/image/letter.svg',
+                              width: 16.2,
+                              height: 18,
+                              ),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30),
+                              borderSide: const BorderSide(
+                                color: Color(0xff97BDFF)
+                              )
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30),
+                              borderSide: const BorderSide(
+                                color: Color(0xff97BDFF)
+                              )
+                            ),
+                            hintText: 'Email',
+                            hintStyle: GoogleFonts.poppins(textStyle: const TextStyle(
+                              fontSize: 12,
+                              color: Color(0xff97BDFF),
+                              fontStyle: FontStyle.normal
+                            ))
+                          ),
+                        ),
+      
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(10),
+                        child: TextField(
+                          obscureText: true,
+                          controller: passwordController,
+                          keyboardType: TextInputType.name,
+                          decoration: InputDecoration(
+                            prefixIcon: Padding(
+                              padding: const EdgeInsets.fromLTRB(32, 0, 24, 0),
+                              child: SvgPicture.asset('assets/image/lock.svg',
+                              width: 16.2,
+                              height: 18,
+                              ),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30),
+                              borderSide: const BorderSide(
+                                color: Color(0xff97BDFF)
+                              )
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30),
+                              borderSide: const BorderSide(
+                                color: Color(0xff97BDFF)
+                              )
+                            ),
+                            hintText: 'Password',
+                            hintStyle: GoogleFonts.poppins(textStyle: const TextStyle(
+                              fontSize: 12,
+                              color: Color(0xff97BDFF),
+                              fontStyle: FontStyle.normal
+                            ))
+                          ),
+                        ),
+      
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(10),
+                        child: TextField(
+                          obscureText: passwordVisible,
+                          keyboardType: TextInputType.name,
+                          decoration: InputDecoration(
+                            prefixIcon: Padding(
+                              padding: const EdgeInsets.fromLTRB(32, 0, 24, 0),
+                              child: SvgPicture.asset('assets/image/lock.svg',
+                              width: 16.2,
+                              height: 18,
+                              ),
+                            ),
+                            suffixIcon:IconButton(onPressed: () {
+                              setState(() {
+                                select();
+                              });
+                              }, icon: Icon(passwordVisible?Icons.remove_red_eye:Icons.password)
+                            
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30),
+                              borderSide: const BorderSide(
+                                color: Color(0xff97BDFF)
+                              )
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30),
+                              borderSide: const BorderSide(
+                                color: Color(0xff97BDFF)
+                              )
+                            ),
+                            hintText: 'Confirm Password',
+                            
+                            hintStyle: GoogleFonts.poppins(textStyle: const TextStyle(
+                              fontSize: 12,
+                              color: Color(0xff97BDFF),
+                              fontStyle: FontStyle.normal
+                            ))
+                          ),
+                        ),
+      
+                      ),
+
+                      const SizedBox(height: 30,),
+                      // Container(
+                      //   padding: const EdgeInsets.fromLTRB(0, 13, 0, 13),
+                      //   decoration: const BoxDecoration(
+                      //     color: Colors.white,
+                      //     borderRadius: BorderRadius.all(Radius.circular(30))
+                      //   ),
+                      //   width: 400,
+                      //   height: 50,
+                      //   child: Text('SIGN UP',
+                      //     style: GoogleFonts.poppins(textStyle: const TextStyle(
+                      //       color: Color(0xff2954F1),
+                      //       fontSize: 22,
+                      //       letterSpacing: 0.66,
+                      //       fontWeight: FontWeight.w600
+                      //     )
+                      //   ),
+                      //   textAlign: TextAlign.center,
+                      // ),
+                      // )
+                      Container(
+                        decoration: const BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(Radius.circular(30))
+                        ),
+                        width: 400,
+                        height: 60,
+                        child: TextButton(
+                          onPressed: (){
+                          print(usernameController.text);
+                          print(emailController.text);
+                          print(passwordController.text);
+                        }, child: Text('SIGN UP',
+                        style: GoogleFonts.poppins(textStyle: const TextStyle(
+                                color: Color(0xff2954F1),
+                                fontSize: 22,
+                                letterSpacing: 0.66,
+                                fontWeight: FontWeight.w600
+                              )
+                            ),
+                          )
+                        ),
+                      )
+                    ],               
+                  ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
