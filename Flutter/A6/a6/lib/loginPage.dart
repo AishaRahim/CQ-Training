@@ -1,18 +1,19 @@
-// ignore_for_file: avoid_print
+// ignore_for_file: avoid_print, file_names
 
-import 'package:a6/loginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ScreenWidget extends StatefulWidget {
-  const ScreenWidget({super.key});
+class LoginPage extends StatefulWidget {
+  final String userName;
+  final String password;
+  const LoginPage({Key? key, required this.userName, required this.password}) : super(key: key);
 
   @override
-  State<ScreenWidget> createState() => _ScreenWidgetState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class _ScreenWidgetState extends State<ScreenWidget> {
+class _LoginPageState extends State<LoginPage> {
   final TextEditingController usernameController = TextEditingController();
 
   final TextEditingController emailController = TextEditingController();
@@ -20,13 +21,13 @@ class _ScreenWidgetState extends State<ScreenWidget> {
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController confirmController = TextEditingController();
 
-  bool passwordVisible = true;
+  bool passwordVisible = false;
 
   @override
   Widget build(BuildContext context) {
-    void select() {
-      passwordVisible = !passwordVisible;
-    }
+    // void select() {
+    //   passwordVisible = !passwordVisible;
+    // }
 
     return Scaffold(
       appBar: AppBar(
@@ -71,7 +72,7 @@ class _ScreenWidgetState extends State<ScreenWidget> {
               child: Column(
                 children: [
                   Text(
-                    'SIGN UP',
+                    'LOGIN',
                     style: GoogleFonts.poppins(
                         textStyle: const TextStyle(
                       color: Colors.white,
@@ -112,36 +113,36 @@ class _ScreenWidgetState extends State<ScreenWidget> {
                                   fontStyle: FontStyle.normal))),
                     ),
                   ),
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    child: TextField(
-                      controller: emailController,
-                      keyboardType: TextInputType.name,
-                      decoration: InputDecoration(
-                          prefixIcon: Padding(
-                            padding: const EdgeInsets.fromLTRB(32, 0, 24, 0),
-                            child: SvgPicture.asset(
-                              'assets/image/letter.svg',
-                              width: 16.2,
-                              height: 18,
-                            ),
-                          ),
-                          enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30),
-                              borderSide:
-                                  const BorderSide(color: Color(0xff97BDFF))),
-                          focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30),
-                              borderSide:
-                                  const BorderSide(color: Color(0xff97BDFF))),
-                          hintText: 'Email',
-                          hintStyle: GoogleFonts.poppins(
-                              textStyle: const TextStyle(
-                                  fontSize: 12,
-                                  color: Color(0xff97BDFF),
-                                  fontStyle: FontStyle.normal))),
-                    ),
-                  ),
+                  // Container(
+                  //   padding: const EdgeInsets.all(10),
+                  //   child: TextField(
+                  //     controller: emailController,
+                  //     keyboardType: TextInputType.name,
+                  //     decoration: InputDecoration(
+                  //         prefixIcon: Padding(
+                  //           padding: const EdgeInsets.fromLTRB(32, 0, 24, 0),
+                  //           child: SvgPicture.asset(
+                  //             'assets/image/letter.svg',
+                  //             width: 16.2,
+                  //             height: 18,
+                  //           ),
+                  //         ),
+                  //         enabledBorder: OutlineInputBorder(
+                  //             borderRadius: BorderRadius.circular(30),
+                  //             borderSide:
+                  //                 const BorderSide(color: Color(0xff97BDFF))),
+                  //         focusedBorder: OutlineInputBorder(
+                  //             borderRadius: BorderRadius.circular(30),
+                  //             borderSide:
+                  //                 const BorderSide(color: Color(0xff97BDFF))),
+                  //         hintText: 'Email',
+                  //         hintStyle: GoogleFonts.poppins(
+                  //             textStyle: const TextStyle(
+                  //                 fontSize: 12,
+                  //                 color: Color(0xff97BDFF),
+                  //                 fontStyle: FontStyle.normal))),
+                  //   ),
+                  // ),
                   Container(
                     padding: const EdgeInsets.all(10),
                     child: TextField(
@@ -173,48 +174,48 @@ class _ScreenWidgetState extends State<ScreenWidget> {
                                   fontStyle: FontStyle.normal))),
                     ),
                   ),
-                  Container(
-                    padding: const EdgeInsets.all(10),
-                    child: TextField(
-                      obscureText: passwordVisible,
-                      controller: confirmController,
-                      keyboardType: TextInputType.name,
-                      decoration: InputDecoration(
-                          prefixIcon: Padding(
-                            padding: const EdgeInsets.fromLTRB(32, 0, 24, 0),
-                            child: SvgPicture.asset(
-                              'assets/image/lock.svg',
-                              width: 16.2,
-                              height: 18,
-                            ),
-                          ),
-                          suffixIcon: IconButton(
-                              onPressed: () {
-                                setState(() {
-                                  select();
-                                });
-                              },
-                              icon: Icon(passwordVisible
-                                  ? Icons.remove_red_eye
-                                  : Icons.password)),
-                          enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30),
-                              borderSide:
-                                  const BorderSide(color: Color(0xff97BDFF))),
-                          focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30),
-                              borderSide:
-                                  const BorderSide(color: Color(0xff97BDFF))),
-                          hintText: 'Confirm Password',
-                          hintStyle: GoogleFonts.poppins(
-                              textStyle: const TextStyle(
-                                  fontSize: 12,
-                                  color: Color(0xff97BDFF),
-                                  fontStyle: FontStyle.normal))),
-                    ),
-                  ),
+                  // Container(
+                  //   padding: const EdgeInsets.all(10),
+                  //   child: TextField(
+                  //     obscureText: passwordVisible,
+                  //     controller: confirmController,
+                  //     keyboardType: TextInputType.name,
+                  //     decoration: InputDecoration(
+                  //         prefixIcon: Padding(
+                  //           padding: const EdgeInsets.fromLTRB(32, 0, 24, 0),
+                  //           child: SvgPicture.asset(
+                  //             'assets/image/lock.svg',
+                  //             width: 16.2,
+                  //             height: 18,
+                  //           ),
+                  //         ),
+                  //         suffixIcon: IconButton(
+                  //             onPressed: () {
+                  //               setState(() {
+                  //                 select();
+                  //               });
+                  //             },
+                  //             icon: Icon(passwordVisible
+                  //                 ? Icons.remove_red_eye
+                  //                 : Icons.password)),
+                  //         enabledBorder: OutlineInputBorder(
+                  //             borderRadius: BorderRadius.circular(30),
+                  //             borderSide:
+                  //                 const BorderSide(color: Color(0xff97BDFF))),
+                  //         focusedBorder: OutlineInputBorder(
+                  //             borderRadius: BorderRadius.circular(30),
+                  //             borderSide:
+                  //                 const BorderSide(color: Color(0xff97BDFF))),
+                  //         hintText: 'Confirm Password',
+                  //         hintStyle: GoogleFonts.poppins(
+                  //             textStyle: const TextStyle(
+                  //                 fontSize: 12,
+                  //                 color: Color(0xff97BDFF),
+                  //                 fontStyle: FontStyle.normal))),
+                  //   ),
+                  // ),
                   const SizedBox(
-                    height: 30,
+                    height: 182,
                   ),
                   Container(
                     decoration: const BoxDecoration(
@@ -224,21 +225,15 @@ class _ScreenWidgetState extends State<ScreenWidget> {
                     height: 60,
                     child: TextButton(
                         onPressed: () {
-                          if(passwordController.text==confirmController.text){
-                          print(usernameController.text);
-                          print(emailController.text);
-                          print(passwordController.text);
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => LoginPage(password: passwordController.text, userName: usernameController.text,)),
-                          );
+                          if(passwordController.text==widget.password && usernameController.text==widget.userName){
+                          print("SUCCESS");
                           } else {
                             print('ERROR');
                           }
 
                         },
                         child: Text(
-                          'SIGN UP',
+                          'LOGIN',
                           style: GoogleFonts.poppins(
                               textStyle: const TextStyle(
                                   color: Color(0xff2954F1),
@@ -256,3 +251,4 @@ class _ScreenWidgetState extends State<ScreenWidget> {
     );
   }
 }
+
