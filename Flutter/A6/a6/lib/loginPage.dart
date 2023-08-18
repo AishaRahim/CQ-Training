@@ -25,9 +25,6 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
-    // void select() {
-    //   passwordVisible = !passwordVisible;
-    // }
 
     return Scaffold(
       appBar: AppBar(
@@ -113,36 +110,6 @@ class _LoginPageState extends State<LoginPage> {
                                   fontStyle: FontStyle.normal))),
                     ),
                   ),
-                  // Container(
-                  //   padding: const EdgeInsets.all(10),
-                  //   child: TextField(
-                  //     controller: emailController,
-                  //     keyboardType: TextInputType.name,
-                  //     decoration: InputDecoration(
-                  //         prefixIcon: Padding(
-                  //           padding: const EdgeInsets.fromLTRB(32, 0, 24, 0),
-                  //           child: SvgPicture.asset(
-                  //             'assets/image/letter.svg',
-                  //             width: 16.2,
-                  //             height: 18,
-                  //           ),
-                  //         ),
-                  //         enabledBorder: OutlineInputBorder(
-                  //             borderRadius: BorderRadius.circular(30),
-                  //             borderSide:
-                  //                 const BorderSide(color: Color(0xff97BDFF))),
-                  //         focusedBorder: OutlineInputBorder(
-                  //             borderRadius: BorderRadius.circular(30),
-                  //             borderSide:
-                  //                 const BorderSide(color: Color(0xff97BDFF))),
-                  //         hintText: 'Email',
-                  //         hintStyle: GoogleFonts.poppins(
-                  //             textStyle: const TextStyle(
-                  //                 fontSize: 12,
-                  //                 color: Color(0xff97BDFF),
-                  //                 fontStyle: FontStyle.normal))),
-                  //   ),
-                  // ),
                   Container(
                     padding: const EdgeInsets.all(10),
                     child: TextField(
@@ -174,46 +141,6 @@ class _LoginPageState extends State<LoginPage> {
                                   fontStyle: FontStyle.normal))),
                     ),
                   ),
-                  // Container(
-                  //   padding: const EdgeInsets.all(10),
-                  //   child: TextField(
-                  //     obscureText: passwordVisible,
-                  //     controller: confirmController,
-                  //     keyboardType: TextInputType.name,
-                  //     decoration: InputDecoration(
-                  //         prefixIcon: Padding(
-                  //           padding: const EdgeInsets.fromLTRB(32, 0, 24, 0),
-                  //           child: SvgPicture.asset(
-                  //             'assets/image/lock.svg',
-                  //             width: 16.2,
-                  //             height: 18,
-                  //           ),
-                  //         ),
-                  //         suffixIcon: IconButton(
-                  //             onPressed: () {
-                  //               setState(() {
-                  //                 select();
-                  //               });
-                  //             },
-                  //             icon: Icon(passwordVisible
-                  //                 ? Icons.remove_red_eye
-                  //                 : Icons.password)),
-                  //         enabledBorder: OutlineInputBorder(
-                  //             borderRadius: BorderRadius.circular(30),
-                  //             borderSide:
-                  //                 const BorderSide(color: Color(0xff97BDFF))),
-                  //         focusedBorder: OutlineInputBorder(
-                  //             borderRadius: BorderRadius.circular(30),
-                  //             borderSide:
-                  //                 const BorderSide(color: Color(0xff97BDFF))),
-                  //         hintText: 'Confirm Password',
-                  //         hintStyle: GoogleFonts.poppins(
-                  //             textStyle: const TextStyle(
-                  //                 fontSize: 12,
-                  //                 color: Color(0xff97BDFF),
-                  //                 fontStyle: FontStyle.normal))),
-                  //   ),
-                  // ),
                   const SizedBox(
                     height: 182,
                   ),
