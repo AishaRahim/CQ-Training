@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'nav.dart';
+
 class Page1 extends StatefulWidget {
   const Page1({super.key});
 
@@ -26,6 +28,8 @@ class PpageState1 extends State<Page1> {
         )),),
         backgroundColor: Colors.lightGreenAccent,
       ),
+            bottomNavigationBar: const MyNav()
+
     );
   }
 }
