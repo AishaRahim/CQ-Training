@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
 import 'package:http/http.dart' as http;
 
 import 'model.dart';
@@ -12,8 +13,11 @@ class UserListPage extends StatefulWidget {
 }
 
 class _UserListPageState extends State<UserListPage> {
+  int? index;
+  static Box<String> flutter = Hive.box<String>("demo");
   @override
   void initState() {
+    index = 0;
     apiCall();
     super.initState();
   }
@@ -26,11 +30,14 @@ class _UserListPageState extends State<UserListPage> {
     if (response.statusCode == 200) {
       setState(() {
         jsonResponse = sampleDataFromJson(response.body);
+        String name=jsonResponse![index!].name!;
+        flutter.put("name",name);
       });
     }
   }
 
   @override
+  
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -48,7 +55,8 @@ class _UserListPageState extends State<UserListPage> {
                       return Card(
                         color: Colors.cyanAccent,
                         child: TextButton(
-                          onPressed: () { 
+                          onPressed: () {                            
+                            print(flutter.get('name'));
                             Navigator.push(
                               context,
                               MaterialPageRoute(builder: (context) => UserDetailPage(js: jsonResponse![index])),

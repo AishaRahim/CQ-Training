@@ -14,6 +14,7 @@ class UserDetailPage extends StatefulWidget {
 }
 
 class _UserDetailPageState extends State<UserDetailPage> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
