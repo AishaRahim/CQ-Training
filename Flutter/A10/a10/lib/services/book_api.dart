@@ -20,8 +20,6 @@ class ApiBookDetail{
   Future apiDetail(int bookId) async {
     http.Response response =
         await http.get(Uri.parse("https://simple-books-api.glitch.me/books/$bookId"));
-        print(response.statusCode);
-
     if (response.statusCode == 200) {
       var jsonResponse = bookbyIdFromJson(response.body);
       return jsonResponse;

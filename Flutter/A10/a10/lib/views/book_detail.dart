@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../controllers/detail_controller.dart';
 
@@ -24,18 +25,41 @@ class _BookDetailState extends State<BookDetail> {
     return Obx(() => detailController.isLoading.isTrue
         ? const Center(child: CircularProgressIndicator()) 
         : Scaffold(
-      body: Center(
-        child: Column(
-          children: [
-            Container(
-              margin: const EdgeInsets.all(20),
-              color: Colors.blue[300],
-              child: Text(detailController.book.value.name!,style: TextStyle(fontSize: 30,color: Colors.blue[900]),),
+      body: Column(
+        children: [
+          Container(
+            color: Colors.tealAccent ,
+            width: 500,
+            height: 300,
+            child: Column(
+              children: [
+                ClipRRect(
+                  child: Image.asset('assets/images/book.png',fit: BoxFit.cover,
+                  height: 300,
+                  ),
+                ),
+                // Text('',style: GoogleFonts.abel(textStyle: const TextStyle(fontSize: 20,fontWeight: FontWeight.w500)),),
+                // const SizedBox(height: 10,),
+                // Text("",style: GoogleFonts.abel(textStyle: const TextStyle(fontSize: 20,fontWeight: FontWeight.w500)),),
+                // const SizedBox(height: 10,),
+                // Text("",style: GoogleFonts.abel(textStyle: const TextStyle(fontSize: 20,fontWeight: FontWeight.w500)),),
+                // const SizedBox(height: 30,),
+              ],
             ),
-          ],
-        ),
+          ),
+          const SizedBox(height: 30,),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(detailController.book.value.name!,style: GoogleFonts.abel(textStyle: const TextStyle(fontSize: 20,fontWeight: FontWeight.w500)),),
+              Text(detailController.book.value.id!.toString(),style: GoogleFonts.abel(textStyle: const TextStyle(fontSize: 20,fontWeight: FontWeight.w500)),),
+              Text(detailController.book.value.author!,style: GoogleFonts.abel(textStyle: const TextStyle(fontSize: 20,fontWeight: FontWeight.w500)),),
+              Text(detailController.book.value.type!,style: GoogleFonts.abel(textStyle: const TextStyle(fontSize: 20,fontWeight: FontWeight.w500)),),
+              Text(detailController.book.value.available!.toString(),style: GoogleFonts.abel(textStyle: const TextStyle(fontSize: 20,fontWeight: FontWeight.w500)),),
+            ],
+          ),
+        ],
       ),
-
     ));
   }
-}
+  }
