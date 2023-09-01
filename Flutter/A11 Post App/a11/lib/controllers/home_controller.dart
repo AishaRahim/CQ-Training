@@ -9,7 +9,7 @@ class HomeController extends GetxController{
 
   Future<void> controllerGetAll() async {
     isLoading(true);
-    var x = await GetAllPostsApi().apiGetall();
+    var x = await ApiCall().apiGetall();
     postList(x);
     isLoading(false);
   }

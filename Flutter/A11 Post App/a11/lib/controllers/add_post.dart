@@ -9,7 +9,7 @@ class CommentsController extends GetxController{
 
   Future<void> controllerAddPost() async {
     isLoading(true);
-    var x = await AddPostApi().apiAddPost();
+    var x = await ApiCall().apiAddPost();
     postList(x);
     isLoading(false);
   }

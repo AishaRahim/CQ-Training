@@ -6,7 +6,7 @@ import '../models/get_comments.dart';
 import '../models/get_single.dart';
 import '../models/update_post.dart';
 
-class GetAllPostsApi{
+class ApiCall{
   Future apiGetall() async {
     http.Response response =
         await http.get(Uri.parse("https://jsonplaceholder.typicode.com/posts"));
@@ -16,9 +16,7 @@ class GetAllPostsApi{
       return jsonResponse;
     }
   }
-}
 
-class GetSinglePostsApi{
   Future apiGetSingle(int postId) async {
     http.Response response =
         await http.get(Uri.parse("https://jsonplaceholder.typicode.com/posts/postId"));
@@ -28,9 +26,7 @@ class GetSinglePostsApi{
       return jsonResponse;
     }
   }
-}
 
-class GetCommentsApi{
   Future apiGetComments(int postId) async {
     http.Response response =
         await http.get(Uri.parse("https://jsonplaceholder.typicode.com/posts/postId/comments"));
@@ -40,9 +36,7 @@ class GetCommentsApi{
       return jsonResponse;
     }
   }
-}
 
-class AddPostApi{
   Future apiAddPost() async {
     http.Response response =
         await http.get(Uri.parse("https://jsonplaceholder.typicode.com/posts"));
@@ -52,9 +46,7 @@ class AddPostApi{
       return jsonResponse;
     }
   }
-}
 
-class UpdatePostApi{
   Future apiUpdatePost(int postId) async {
     http.Response response =
         await http.get(Uri.parse("https://jsonplaceholder.typicode.com/posts/postId"));
@@ -64,4 +56,5 @@ class UpdatePostApi{
       return jsonResponse;
     }
   }
+
 }
