@@ -46,7 +46,7 @@ class _PostDetailPageState extends State<PostDetailPage> {
                       title: singlePostController.singlePost.value.title!,
                     ));
                   },
-                  icon: const Icon(Icons.update),
+                  icon: const Icon(Icons.edit_note),
                   label: Text(
                     "Update Post",
                     style: GoogleFonts.poppins(

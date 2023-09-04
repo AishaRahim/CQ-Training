@@ -46,7 +46,7 @@ class ApiCall{
           "title": title,
           "body": body,
         });
-        // print(response.statusCode);
+        print(response.statusCode);
 
     if (response.statusCode == 200) {
       var jsonResponse = addPostFromJson(response.body);
@@ -54,7 +54,7 @@ class ApiCall{
     }
   }
 
-  Future apiUpdatePost(int postId,String title,String body) async {
+  Future apiUpdatePost(String postId,String title,String body) async {
     http.Response response =
         await http.put(Uri.parse("https://jsonplaceholder.typicode.com/posts/$postId"),
         body: 
@@ -64,6 +64,8 @@ class ApiCall{
             "body": body,
           }
         );
+        print(response.statusCode);
+
 
     if (response.statusCode == 200) {
       var jsonResponse = updatePostFromJson(response.body);

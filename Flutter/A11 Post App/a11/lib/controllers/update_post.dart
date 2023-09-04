@@ -7,7 +7,7 @@ class UpdatePostController extends GetxController{
   Rx updatePost = UpdatePost().obs;
   RxBool isLoading = true.obs;
 
-  Future<void> controllerUpdatePost(int postId,String title,String body) async {
+  Future<void> controllerUpdatePost(String postId,String title,String body) async {
     isLoading(true);
     var x = await ApiCall().apiUpdatePost(postId,title,body);
     updatePost(x);
