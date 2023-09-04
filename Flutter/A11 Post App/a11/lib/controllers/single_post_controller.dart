@@ -4,13 +4,13 @@ import '../models/get_single.dart';
 import '../services/apis.dart';
 
 class SinglePostController extends GetxController{
-  Rx <GetSingle> postList = GetSingle().obs;
+  Rx <GetSingle> singlePost = GetSingle().obs;
   RxBool isLoading = true.obs;
 
-  Future<void> controllerGetSingle(id) async {
+  Future<void> controllerGetSingle(int id) async {
     isLoading(true);
     var x = await ApiCall().apiGetSingle(id);
-    postList(x);
+    singlePost(x);
     isLoading(false);
   }
 }

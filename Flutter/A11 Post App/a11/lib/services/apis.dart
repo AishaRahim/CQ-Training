@@ -19,7 +19,7 @@ class ApiCall{
 
   Future apiGetSingle(int postId) async {
     http.Response response =
-        await http.get(Uri.parse("https://jsonplaceholder.typicode.com/posts/postId"));
+        await http.get(Uri.parse("https://jsonplaceholder.typicode.com/posts/$postId"));
 
     if (response.statusCode == 200) {
       var jsonResponse = getSingleFromJson(response.body);
@@ -29,7 +29,8 @@ class ApiCall{
 
   Future apiGetComments(int postId) async {
     http.Response response =
-        await http.get(Uri.parse("https://jsonplaceholder.typicode.com/posts/postId/comments"));
+        await http.get(Uri.parse("https://jsonplaceholder.typicode.com/posts/$postId/comments"));
+        // print(response.statusCode);
 
     if (response.statusCode == 200) {
       var jsonResponse = getCommentsFromJson(response.body);
@@ -37,9 +38,15 @@ class ApiCall{
     }
   }
 
-  Future apiAddPost() async {
+  Future apiAddPost(String userID,String title,String body) async {
     http.Response response =
-        await http.get(Uri.parse("https://jsonplaceholder.typicode.com/posts"));
+        await http.post(Uri.parse("https://jsonplaceholder.typicode.com/posts"),
+        body: {
+          "userId": userID,
+          "title": title,
+          "body": body,
+        });
+        // print(response.statusCode);
 
     if (response.statusCode == 200) {
       var jsonResponse = addPostFromJson(response.body);
@@ -47,9 +54,16 @@ class ApiCall{
     }
   }
 
-  Future apiUpdatePost(int postId) async {
+  Future apiUpdatePost(int postId,String title,String body) async {
     http.Response response =
-        await http.get(Uri.parse("https://jsonplaceholder.typicode.com/posts/postId"));
+        await http.put(Uri.parse("https://jsonplaceholder.typicode.com/posts/$postId"),
+        body: 
+          {
+            "id": postId,
+            "title": title,
+            "body": body,
+          }
+        );
 
     if (response.statusCode == 200) {
       var jsonResponse = updatePostFromJson(response.body);
